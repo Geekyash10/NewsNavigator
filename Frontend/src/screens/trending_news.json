@@ -1,0 +1,107 @@
+{
+    "status": "success",
+    "totalResults": 10,
+    "newsList": [
+      {
+        "id": "1",
+        "title": "Congress Supported J&K Assembly Resolution On Statehood For Land, Jobs: Karra",
+        "source": "Kashmir Observer",
+        "author": "Press Trust of India",
+        "description": "Jammu and Kashmir Pradesh Congress Committee (JKPCC) president Tariq Hameed Karra on Sunday said his party supported the resolution in the assembly in favour of 'statehood' with guarantees for land, jobs and natural resources.",
+        "url": "https://kashmirobserver.net/2024/11/17/congress-supported-jk-assembly-resolution-on-statehood-for-land-jobs-karra/",
+        "image_url": "https://kashmirobserver.net/wp-content/uploads/2024/10/Tariq-Karra.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "2",
+        "title": "Bangladesh Will Seek Extradition of Ex-Premier Sheikh Hasina from India",
+        "source": "Newsday",
+        "author": "Unknown",
+        "description": "Bangladesh's interim leader and Nobel Peace laureate Muhammad Yunus says his administration will seek the extradition of ousted Prime Minister Sheikh Hasina from India.",
+        "url": "https://www.newsday.com/news/nation/bangladesh-sheikh-hasina-extradition-india-j40695",
+        "image_url": "https://cdn.newsday.com/_next/image?q=80&url=https%3A%2F%2Fcdn.newsday.com%2Fimage.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "3",
+        "title": "Maneka Gandhi Urges Bihar Government to Ban Animal Sacrifice",
+        "source": "ThePrint",
+        "author": "Language",
+        "description": "Maneka Gandhi and other animal rights activists urged the Nitish Kumar government in Bihar to ban animal sacrifices in the state.",
+        "url": "https://theprint.in/india/maneka-gandhi-ban-animal-sacrifice/753798/",
+        "image_url": "https://theprint.in/wp-content/uploads/2024/10/maneka-gandhi.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "4",
+        "title": "NASA's Artemis 2 Crew Practices Lunar Return Procedures",
+        "source": "NASA News",
+        "author": "NASA",
+        "description": "The Artemis 2 mission crew has begun simulations for their historic lunar return flight scheduled for late 2024.",
+        "url": "https://nasa.gov/artemis-2-crew-practices",
+        "image_url": "https://nasa.gov/images/artemis-2.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "5",
+        "title": "India Achieves Record Rice Exports Despite Weather Challenges",
+        "source": "Economic Times",
+        "author": "ET Bureau",
+        "description": "India achieved record rice exports this year despite adverse weather conditions and geopolitical challenges.",
+        "url": "https://economictimes.indiatimes.com/news/record-rice-exports",
+        "image_url": "https://economictimes.indiatimes.com/images/rice-exports.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "6",
+        "title": "Google AI Revolutionizes Search With Contextual Understanding",
+        "source": "TechCrunch",
+        "author": "Sarah Perez",
+        "description": "Google's AI now delivers more contextual search results, marking a major leap in the way users interact with search engines.",
+        "url": "https://techcrunch.com/google-ai-contextual-search/",
+        "image_url": "https://techcrunch.com/images/google-ai.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "7",
+        "title": "Scientists Discover Potential Cure for Alzheimer's",
+        "source": "Nature",
+        "author": "Dr. Helen Rowe",
+        "description": "A breakthrough study shows potential in reversing Alzheimer’s disease with a newly developed compound.",
+        "url": "https://nature.com/articles/alzheimers-cure-breakthrough",
+        "image_url": "https://nature.com/images/alzheimers.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "8",
+        "title": "India and US Sign Critical Tech Development Pact",
+        "source": "Hindustan Times",
+        "author": "Anjali Sinha",
+        "description": "India and the US have signed a critical technology development agreement aimed at boosting bilateral cooperation.",
+        "url": "https://hindustantimes.com/news/india-us-tech-pact",
+        "image_url": "https://hindustantimes.com/images/india-us-pact.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "9",
+        "title": "Paris Summit Concludes With Ambitious Climate Commitments",
+        "source": "Reuters",
+        "author": "John Spencer",
+        "description": "The Paris Climate Summit concluded with countries committing to net-zero emissions by 2050 and a new fund for developing nations.",
+        "url": "https://reuters.com/news/paris-climate-summit",
+        "image_url": "https://reuters.com/images/paris-summit.jpg",
+        "bookmarked": false
+      },
+      {
+        "id": "10",
+        "title": "The Rise of Electric Cars in 2024: Trends and Insights",
+        "source": "EV News",
+        "author": "Rachel Lee",
+        "description": "Electric vehicle sales have skyrocketed in 2024, with major automakers unveiling innovative models.",
+        "url": "https://evnews.com/articles/rise-of-electric-cars",
+        "image_url": "https://evnews.com/images/electric-cars.jpg",
+        "bookmarked": false
+      }
+    ]
+  }
+  
