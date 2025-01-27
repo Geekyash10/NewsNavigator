@@ -40,8 +40,8 @@ Eight machine learning models were trained for this project, focusing on fake ne
 
 ---
 ## Architectural Diagram
-<img src="./ASSETS/image.png" alt="" width="500">
-<img src="./ASSETS/image-1.png" alt="" width="500">
+<img src="./assets/image.png" alt="" width="500">
+<img src="./assets/image-1.png" alt="" width="500">
 
 ## Dataset and Research
 The project relied on a labeled dataset for fake news detection and categorization. The dataset underwent preprocessing steps such as text cleaning, vectorization, and feature extraction.
@@ -82,12 +82,12 @@ For backend setup, ensure the machine learning API is hosted and accessible by t
 
 ---
 ## Application Screenshots
-<img src="./ASSETS/image-7.png" alt="" height="300">
-<img src="./ASSETS/image-2.png" alt="" height="300">
-<img src="./ASSETS/image-4.png" alt="" height="300">
-<img src="./ASSETS/image-3.png" alt="" height="300">
-<img src="./ASSETS/image-5.png" alt="" height="300">
-<img src="./ASSETS/image-6.png" alt="" height="300">
+<img src="./assets/image-7.png" alt="" height="300">
+<img src="./assets/image-2.png" alt="" height="300">
+<img src="./assets/image-4.png" alt="" height="300">
+<img src="./assets/image-3.png" alt="" height="300">
+<img src="./assets/image-5.png" alt="" height="300">
+<img src="./assets/image-6.png" alt="" height="300">
 
 ## Usage
 1. Choose to input a news article by pasting its URL or entering its description.
