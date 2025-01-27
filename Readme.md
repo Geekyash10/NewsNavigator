@@ -82,12 +82,14 @@ For backend setup, ensure the machine learning API is hosted and accessible by t
 
 ---
 ## Application Screenshots
-<img src="./assets/image-7.png" alt="" height="300">
-<img src="./assets/image-2.png" alt="" height="300">
-<img src="./assets/image-4.png" alt="" height="300">
-<img src="./assets/image-3.png" alt="" height="300">
-<img src="./assets/image-5.png" alt="" height="300">
-<img src="./assets/image-6.png" alt="" height="300">
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="./assets/image-7.png" alt="" height="500">
+  <img src="./assets/image-2.png" alt="" height="500">
+  <img src="./assets/image-4.png" alt="" height="500">
+  <img src="./assets/image-3.png" alt="" height="500">
+  <img src="./assets/image-5.png" alt="" height="500">
+  <img src="./assets/image-6.png" alt="" height="500">
+</d4v>
 
 ## Usage
 1. Choose to input a news article by pasting its URL or entering its description.
