@@ -16,7 +16,7 @@ const SignupScreen = ({navigation}) => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://10.0.2.2:5000/signup', {
+      const response = await axios.post('http://10.38.154.157:5001/signup', {
         email,
         password,
       });
@@ -58,6 +58,7 @@ const SignupScreen = ({navigation}) => {
       <Text style={styles.title}>Sign Up</Text>
       <TextInput
         style={styles.input}
+        placeholderTextColor="#888"
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
@@ -65,6 +66,7 @@ const SignupScreen = ({navigation}) => {
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="#888"
         secureTextEntry
         value={password}
         onChangeText={setPassword}
@@ -103,6 +105,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 12,
     backgroundColor: '#fff',
+    color: '#000000',
   },
   button: {
     backgroundColor: '#4a90e2',

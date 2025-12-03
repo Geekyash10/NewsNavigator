@@ -44,7 +44,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         'http://10.0.2.2:3000/api/description',
+//         'http://10.38.154.157:3000/api/description',
 //         {
 //           description: inputValue,
 //         },
@@ -68,7 +68,7 @@
 //     }
 
 //     try {
-//       const response = await axios.post('http://10.0.2.2:3000/api/scrape', {
+//       const response = await axios.post('http://10.38.154.157:3000/api/scrape', {
 //         url: inputValue,
 //       });
 
@@ -309,7 +309,7 @@ const HomeScreen: React.FC<{ setIsLoggedIn: (state: boolean) => void }> = ({
   const [resultModalVisible, setResultModalVisible] = useState(false);
   const [classificationResult, setClassificationResult] = useState({
     category: '',
-    fakeStatus: '',
+    // fakeStatus: '',
   });
 
   const navigation = useNavigation();
@@ -336,15 +336,15 @@ const HomeScreen: React.FC<{ setIsLoggedIn: (state: boolean) => void }> = ({
 
     try {
       const response = await axios.post(
-        'http://10.0.2.2:3000/api/description',
+        'http://10.38.154.157:3000/api/description',
         {
           description: inputValue,
         }
       );
 
       if (response.data) {
-        const { category, fake_status } = response.data;
-        setClassificationResult({ category, fakeStatus: fake_status });
+        const { category } = response.data;
+        setClassificationResult({ category });
         setResultModalVisible(true);
       } else {
         Alert.alert('Error', response.data.error || 'Classification failed.');
@@ -362,13 +362,13 @@ const HomeScreen: React.FC<{ setIsLoggedIn: (state: boolean) => void }> = ({
     }
 
     try {
-      const response = await axios.post('http://10.0.2.2:3000/api/scrape', {
+      const response = await axios.post('http://10.38.154.157:3000/api/scrape', {
         url: inputValue,
       });
 
       if (response.data) {
-        const { category, fake_status } = response.data;
-        setClassificationResult({ category, fakeStatus: fake_status });
+        const { category } = response.data;
+        setClassificationResult({ category });
         setResultModalVisible(true);
       } else {
         Alert.alert('Error', response.data.error || 'Classification failed.');
@@ -381,16 +381,19 @@ const HomeScreen: React.FC<{ setIsLoggedIn: (state: boolean) => void }> = ({
 
   const handleLogout = async () => {
     try {
+      console.log('Attempting to remove userToken from AsyncStorage');
       await AsyncStorage.removeItem('userToken');
+      console.log('userToken removed successfully');
       Alert.alert('Logged Out', 'You have been logged out successfully.');
-      navigation.navigate('Login'); // Ensure the screen name matches
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Login' }],
+      }); // Reset navigation stack to prevent going back to logged-in screens
     } catch (error) {
       console.error('Error during logout:', error);
       Alert.alert('Error', 'An error occurred during logout.');
     }
   };
-  
-  
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -399,10 +402,7 @@ const HomeScreen: React.FC<{ setIsLoggedIn: (state: boolean) => void }> = ({
         Classify news articles by providing a link or description.
       </Text>
 
-
-    
-
-       <View style={styles.featuresContainer}>
+      <View style={styles.featuresContainer}>
         <Text style={styles.featuresTitle}>
           Features of the News Classifier App:
         </Text>
@@ -419,7 +419,6 @@ const HomeScreen: React.FC<{ setIsLoggedIn: (state: boolean) => void }> = ({
           </View>
         ))}
       </View>
-      
 
       <View style={styles.tabContainer}>
         <TouchableOpacity
@@ -484,7 +483,7 @@ const HomeScreen: React.FC<{ setIsLoggedIn: (state: boolean) => void }> = ({
         visible={resultModalVisible}
         onClose={() => setResultModalVisible(false)}
         category={classificationResult.category}
-        fakeStatus={classificationResult.fakeStatus}
+        // fakeStatus={classificationResult.fakeStatus}
       />
     </ScrollView>
   );
@@ -509,15 +508,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
-  tabContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: '#dfe6e9',
-    borderRadius: 10,
-    overflow: 'hidden',
-    marginBottom: 12,
-  },
-    featuresContainer: {
+  featuresContainer: {
     marginBottom: 20,
     padding: 15,
     backgroundColor: '#ecf0f1',
@@ -544,6 +535,14 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#7f8c8d',
     flexShrink: 1,
+  },
+  tabContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: '#dfe6e9',
+    borderRadius: 10,
+    overflow: 'hidden',
+    marginBottom: 12,
   },
   tab: {
     flex: 1,
@@ -592,6 +591,9 @@ const styles = StyleSheet.create({
   logoutText: {
     color: '#ffffff',
     fontSize: 16,
+  },
+  input: {
+    color: '#000', // Set text color to black
   },
 });
 

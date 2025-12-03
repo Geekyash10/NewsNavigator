@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text, Modal, StyleSheet, TouchableOpacity } from 'react-native';
 
-const ResultModal = ({ visible, onClose, category, fakeStatus }) => {
+const ResultModal = ({ visible, onClose, category }) => {
   return (
     <Modal visible={visible} transparent animationType="slide">
       <View style={styles.modalBackground}>
         <View style={styles.modalContent}>
           <Text style={styles.resultTitle}>Classification Result</Text>
           <Text style={styles.resultText}>Category: {category}</Text>
-          <Text style={styles.resultText}>Fake Status: {fakeStatus}</Text>
           <TouchableOpacity onPress={onClose} style={styles.closeButton}>
             <Text style={styles.closeButtonText}>Close</Text>
           </TouchableOpacity>
@@ -36,10 +35,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: '#000', // Ensure title text is visible
   },
   resultText: {
     fontSize: 16,
     marginBottom: 8,
+    color: '#000', // Ensure result text is visible
   },
   closeButton: {
     marginTop: 15,

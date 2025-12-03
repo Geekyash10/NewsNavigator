@@ -1,5 +1,5 @@
 import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
-import {StackScreenProps} from '@react-navigation/stack';
+import {StackScreenProps} from '@react-navigation/stack'; // Used for RootStackParamList
 import {RouteProp} from '@react-navigation/native';
 
 // Define the types for each screen in the bottom tab navigator
@@ -35,3 +35,10 @@ export type BookmarkedNewsScreenRouteProp = RouteProp<
   BottomTabParamList,
   'Bookmarked News'
 >;
+
+// Define the types for the root stack navigator
+export type RootStackParamList = {
+  Login: undefined;
+  Signup: undefined;
+  BottomTabs: undefined;
+};

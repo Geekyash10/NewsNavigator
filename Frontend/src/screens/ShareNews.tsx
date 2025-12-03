@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const BOOKMARKS_API = 'http://10.0.2.2:5000/api/bookmarksshown';
+const BOOKMARKS_API = 'http://10.38.154.157:5001/api/bookmarksshown';
 
 const ShareScreen: React.FC = () => {
   const [bookmarkedNews, setBookmarkedNews] = useState([]); // State for bookmarks

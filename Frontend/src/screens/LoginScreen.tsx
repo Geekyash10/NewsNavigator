@@ -3,7 +3,6 @@ import {
   View,
   Text,
   TextInput,
-  Button,
   StyleSheet,
   TouchableOpacity,
   Alert,
@@ -14,27 +13,43 @@ import LottieView from 'lottie-react-native';
 const LoginScreen = ({navigation, setIsLoggedIn}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
+    if (!email || !password) {
+      Alert.alert('Error', 'Please enter both email and password.');
+      return;
+    }
+    setLoading(true);
     try {
-      const response = await fetch('http://10.0.2.2:5000/login', {
+      const response = await fetch('http://10.38.154.157:5001/login', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({email, password}),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
-      if (response.ok) {
-        const {token} = data;
-        await AsyncStorage.setItem('userToken', token);
-        Alert.alert('Success', 'Login successful');
+      let data;
+      try {
+        data = await response.json();
+      } catch (jsonError) {
+        data = {};
+      }
+
+      if (response.ok && data.token) {
+        await AsyncStorage.setItem('userToken', data.token);
         setIsLoggedIn(true);
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'BottomTabs' }],
+        });
       } else {
         Alert.alert('Error', data.error || 'Login failed');
       }
     } catch (error) {
       Alert.alert('Error', 'An error occurred during login');
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -46,22 +61,25 @@ const LoginScreen = ({navigation, setIsLoggedIn}) => {
         loop
         style={styles.lottie}
       />
-      {/* <Text style={styles.title}>Login</Text> */}
       <TextInput
         style={styles.input}
+        placeholderTextColor="#888"
         placeholder="Email"
         value={email}
+        autoCapitalize="none"
+        keyboardType="email-address"
         onChangeText={setEmail}
       />
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="#888"
         secureTextEntry
         value={password}
         onChangeText={setPassword}
       />
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Login</Text>
+      <TouchableOpacity style={styles.button} onPress={handleLogin} disabled={loading}>
+        <Text style={styles.buttonText}>{loading ? 'Logging in...' : 'Login'}</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
         <Text style={styles.link}>Don't have an account? Sign Up</Text>
@@ -97,6 +115,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 12,
     backgroundColor: '#fff',
+    color: '#000000',
   },
   button: {
     backgroundColor: '#4a90e2',

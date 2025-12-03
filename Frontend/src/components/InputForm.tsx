@@ -20,8 +20,9 @@ const InputForm: React.FC<InputFormProps> = ({
   return (
     <View style={styles.container}>
       <TextInput
-        style={styles.input}
+        style={[styles.input, { color: '#000' }]} // Ensure input text is visible
         placeholder={placeholderText}
+        placeholderTextColor="#000" // Ensure placeholder text is visible
         value={value}
         onChangeText={onChangeText}
         multiline={inputType === 'description'}
@@ -40,6 +41,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     fontSize: 16,
+    color: '#000', // Ensure input text is visible
     backgroundColor: '#fff',
   },
 });

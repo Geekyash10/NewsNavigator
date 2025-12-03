@@ -18,7 +18,7 @@
 
 // const API_URL = 'https://newsdata.io/api/1/news';
 // const API_KEY = 'pub_589950ec57a4697dc0572b98f392550e505d9'; // Your API key
-// const BOOKMARK_API = 'http://10.0.2.2:5000/bookmark'; // Your server URL for bookmarks
+// const BOOKMARK_API = 'http://10.38.154.157:5000/bookmark'; // Your server URL for bookmarks
 
 // const TrendingNewsScreen: React.FC = () => {
 //   const [newsList, setNewsList] = useState([]);
@@ -246,7 +246,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import fallbackData from './trending_news.json'; // Import local JSON data
 import axios from 'axios';
 
-const BOOKMARK_API = 'http://10.0.2.2:5000/api/bookmark'; // Your server URL for bookmarks
+const BOOKMARK_API = 'http://10.38.154.157:5001/api/bookmark'; // Your server URL for bookmarks
 
 const TrendingNewsScreen: React.FC = () => {
   const [newsList, setNewsList] = useState([]);

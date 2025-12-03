@@ -5,8 +5,8 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/Ionicons'; // Import Ionicons
 
-const BOOKMARKS_API = 'http://10.0.2.2:5000/api/bookmarksshown'; // Fetch bookmarks
-const REMOVE_BOOKMARK_API = 'http://10.0.2.2:5000/api/removeBookmark'; // Remove bookmark
+const BOOKMARKS_API = 'http://10.38.154.157:5001/api/bookmarksshown'; // Fetch bookmarks
+const REMOVE_BOOKMARK_API = 'http://10.38.154.157:5001/api/removeBookmark'; // Remove bookmark
 
 const SimilarNewsScreen: React.FC = () => {
   const [bookmarkedNews, setBookmarkedNews] = useState([]); // List of bookmarked news
